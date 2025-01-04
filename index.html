@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Resume</title>
+    <style>
+        :root {
+            --primary-color: rgb(45, 55, 72);
+            --secondary-color: rgb(74, 85, 104);
+            --accent-color: rgb(49, 130, 206);
+            --light-bg: rgb(247, 250, 252);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--primary-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+            page-break-inside: avoid;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-weight: bold;
+        }
+
+        .date {
+            color: var(--secondary-color);
+        }
+
+        .position {
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-color);
+            page-break-inside: avoid;
+        }
+
+        .project-title {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        @media print {
+            body {
+                padding: 0.5in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--accent-color);
+            }
+
+            a[href]:after {
+                content: none !important;
+            }
+
+            .skill-category, .project-card {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: var(--light-bg) !important;
+                box-shadow: none;
+            }
+
+            .project-card {
+                border-left: 4px solid var(--accent-color) !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                color: var(--accent-color) !important;
+                border-bottom: 2px solid var(--accent-color) !important;
+            }
+
+            .position, .project-title, .skill-category h3 {
+                color: var(--accent-color) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML remains exactly the same as in the previous version -->
+    <header>
+        <h1>[Your Name]</h1>
+        <div class="contact-info">
+            <a href="mailto:email@example.com">email@example.com</a> |
+            <a href="tel:+1234567890">(123) 456-7890</a> |
+            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
+            <a href="https://github.com/yourusername">GitHub</a> |
+            [Location]
+        </div>
+        <p>Innovative Software Developer with [X] years of experience building scalable applications and delivering high-impact solutions.</p>
+    </header>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                JavaScript, TypeScript, Python, Java
+            </div>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                React, Vue.js, HTML5, CSS3, Sass
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                Node.js, Express, Django, RESTful APIs
+            </div>
+            <div class="skill-category">
+                <h3>Database</h3>
+                PostgreSQL, MongoDB, Redis
+            </div>
+            <div class="skill-category">
+                <h3>DevOps</h3>
+                Docker, AWS, CI/CD, Git
+            </div>
+            <div class="skill-category">
+                <h3>Testing</h3>
+                Jest, Cypress, PyTest
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="company">[Company Name]</span>
+                <span class="date">[Start Date] - Present</span>
+            </div>
+            <div class="position">Senior Software Developer</div>
+            <ul>
+                <li>Led development of microservices architecture serving 1M+ daily users, improving system reliability by 99.9%</li>
+                <li>Architected and implemented real-time analytics dashboard reducing report generation time by 80%</li>
+                <li>Mentored junior developers and conducted code reviews, raising team velocity by 40%</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="company">[Previous Company]</span>
+                <span class="date">[Start Date] - [End Date]</span>
+            </div>
+            <div class="position">Software Developer</div>
+            <ul>
+                <li>Developed RESTful APIs handling 500K+ requests daily with 99.99% uptime</li>
+                <li>Implemented automated testing suite reducing bug detection time by 60%</li>
+                <li>Optimized database queries resulting in 70% faster page load times</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-title">[Project Name]</div>
+                <p>Full-stack application using React, Node.js, and PostgreSQL. Implemented real-time updates using WebSocket, achieving 50ms latency.</p>
+                <div class="project-tech">Technologies: React, Node.js, PostgreSQL, WebSocket</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">[Project Name]</div>
+                <p>Microservices-based system processing 100K+ daily transactions. Implemented event-driven architecture using Kafka.</p>
+                <div class="project-tech">Technologies: Python, Docker, Kafka, MongoDB</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">[Project Name]</div>
+                <p>Developed an AI-powered recommendation engine that increased user engagement by 45% and reduced bounce rates by 30%.</p>
+                <div class="project-tech">Technologies: Python, TensorFlow, AWS Lambda, DynamoDB</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="company">[University Name]</span>
+                <span class="date">[Graduation Year]</span>
+            </div>
+            <div class="position">Bachelor of Science in Computer Science</div>
+            <ul>
+                <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Database Systems</li>
+                <li>GPA: [X.XX]</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
